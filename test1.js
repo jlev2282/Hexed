@@ -68,6 +68,7 @@ $("#get_palette").on("click", function() {
           <span id='tert_pant'>${snapshot.val().tert_pant}</span>
         </div>`
         );
+      $("#message_html").val(hex[0]);
       // var app = angular.module('myApp', []);
       // app.controller('myCtrl', function($scope) {
       //   $scope.name = "farts";
