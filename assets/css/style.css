@@ -1,0 +1,29 @@
+body {
+	background-color:#FEFAFC;
+}
+
+.jumbotron {
+	background-image: url("http://i.imgur.com/hCIPKBl.jpg");
+	background-size:cover;
+	padding-bottom: 150px;
+}
+
+.moveRight {
+	margin-left: 200px;
+}
+
+.button {
+    background-color: #ECF698; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 5px;
+    cursor: pointer;
+    width:200px;
+	height:100px;
+}
+
+

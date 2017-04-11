@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link rel="stylesheet" href="assets/javascript/dropzone/dist/dropzone.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel=“stylesheet” href=“https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css“>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pop_up.css">
+
+	<title>Hexed</title>
+</head>
+<body>
+
+<div>
+	<header class="jumbotron">
+	</header>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			
+		</div>
+
+		<div class="col-md-8">
+			<br><br><br>
+			<div class="moveRight">
+				<p>
+					<button class="button"></button>
+					<button class="button"></button>
+				</p>
+				<p>
+					<button class="button"></button>
+					<button class="button"></button>
+				</p>
+				<p>
+					<button class="button"></button>
+					<button class="button"></button>
+				</p>
+				<br>
+				<div id="userLike" class="glyphicon glyphicon-heart"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+<div class="modal-content">
+	<div class="modal-body">
+    	<span class="close">&times;</span>
+
+    	<div class="userInput">
+
+    		<div id="userLikeSaved"></div>
+
+    		<div class="userEmailForm">
+				<form id="myform" method="post">
+					<label>Name</label>
+					<input type="text" name="reply_to"/>
+					<label>EMail</label>
+					<input type="text" name="from_name"/>
+					<label>Comments</label>
+					<input type="text" name="message_html"/>
+					<a class="glyphicon glyphicon-envelope"></a>
+				</form>
+			</div>
+		</div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+<!-- pop up window -->
+<!-- <div id="myModal" class="modal">
+	<div id="openModal" class="modalDialog modal" data-transition="slide">
+		<div class=".modal-content">
+			<div class="modal-header">
+				<a class="close" href="#">&times;</a>
+			</div>
+
+			<div class="modal-body">
+				<h2>Email</h2>
+			
+				<form>
+					<input type="email" value="your email">
+					<a class="glyphicon glyphicon-envelope"></a>
+				</form>
+			</div>
+		</div>	
+	</div>
+</div>	 -->
+
+<script src="assets/javascript/pop_up.js"></script>
+</body>
+</html>
