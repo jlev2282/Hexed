@@ -68,7 +68,15 @@ $("#get_palette").on("click", function() {
           <span id='tert_pant'>${snapshot.val().tert_pant}</span>
         </div>`
         );
-      $("#message_html").val(hex[0]);
+      var send_email = hex.concat(pantone);
+      send_email.splice(0,0,"Primary Hex");
+      send_email.splice(2,0,"Secondary Hex");
+      send_email.splice(4,0,"Tertiary Hex");
+      send_email.splice(6,0,"Primary Pantone");
+      send_email.splice(8,0,"Secondary Pantone");
+      send_email.splice(10,0,"Tertiary Pantone");
+
+      $("#message_html").val(send_email.toString());
       // var app = angular.module('myApp', []);
       // app.controller('myCtrl', function($scope) {
       //   $scope.name = "farts";
@@ -99,6 +107,9 @@ $("#get_palette").on("click", function() {
     .then(function(){ 
       alert("Sent!");
        myform.find("button").text("Send");
+      $("#from_name").val("");
+      $("#message_html").val("");
+
     }, function(err) {
        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
        myform.find("button").text("Send");
