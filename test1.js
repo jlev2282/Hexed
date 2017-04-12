@@ -68,6 +68,14 @@ $("#get_palette").on("click", function() {
           <span id='tert_pant'>${snapshot.val().tert_pant}</span>
         </div>`
         );
+
+      $("#primaryHex").append(snapshot.val().prim_hex).css("background-color", snapshot.val().prim_hex);
+      $("#primaryPantone").append(snapshot.val().prim_pant);
+      $("#secondaryHex").append(snapshot.val().sec_hex);
+      $("#secondaryPantone").append(snapshot.val().sec_pant);
+      $("#tertiaryHex").append(snapshot.val().tert_hex);
+      $("#tertiaryPantone").append(snapshot.val().tert_pant);
+
       var send_email = hex.concat(pantone);
       send_email.splice(0,0,"Primary Hex");
       send_email.splice(2,0,"Secondary Hex");
