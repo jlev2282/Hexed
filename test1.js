@@ -35,11 +35,11 @@ $("#get_palette").on("click", function() {
       url: queryURL,
       method: "GET",
       success: function(json){
-      console.log('hi!');
+      console.log('EXCELLENT!');
                //perform operation
         },
         error: function() {
-        console.log('Error occurs!');
+        console.log('BOGUS!');
         $("#Last_Palette").prepend(`
           <div class='well'>
             <img src="IMG_7366.jpg" alt="" class="url_img">
