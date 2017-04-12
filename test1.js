@@ -70,11 +70,11 @@ $("#get_palette").on("click", function() {
         );
 
       $("#primaryHex").append(snapshot.val().prim_hex).css("background-color", snapshot.val().prim_hex);
-      $("#primaryPantone").append(snapshot.val().prim_pant);
-      $("#secondaryHex").append(snapshot.val().sec_hex);
-      $("#secondaryPantone").append(snapshot.val().sec_pant);
-      $("#tertiaryHex").append(snapshot.val().tert_hex);
-      $("#tertiaryPantone").append(snapshot.val().tert_pant);
+      $("#primaryPantone").append(snapshot.val().prim_pant).css("background-color", snapshot.val().prim_hex);
+      $("#secondaryHex").append(snapshot.val().sec_hex).css("background-color", snapshot.val().sec_hex);
+      $("#secondaryPantone").append(snapshot.val().sec_pant).css("background-color", snapshot.val().sec_hex);
+      $("#tertiaryHex").append(snapshot.val().tert_hex).css("background-color", snapshot.val().tert_hex);
+      $("#tertiaryPantone").append(snapshot.val().tert_pant).css("background-color", snapshot.val().tert_hex);
 
       var send_email = hex.concat(pantone);
       send_email.splice(0,0,"Primary Hex");
