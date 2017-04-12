@@ -33,7 +33,18 @@ $("#get_palette").on("click", function() {
       var queryURL = "https://fathomless-plains-61908.herokuapp.com/?link=" + enc_url + "&" + palette;
       $.ajax({
       url: queryURL,
-      method: "GET"
+      method: "GET",
+      success: function(json){
+      console.log('hi!');
+               //perform operation
+        },
+        error: function() {
+        console.log('Error occurs!');
+        $("#Last_Palette").prepend(`
+          <div class='well'>
+            <img src="IMG_7366.jpg" alt="" class="url_img">
+          </div>`);
+       }
     }).done(function(response) {
       console.log(response);
       // var results = Json.parse(response);
