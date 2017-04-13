@@ -51,7 +51,7 @@ $("#get_palette").on("click", function() {
         error: function() {
         console.log('BOGUS!');
         $("#Last_Palette").prepend(`
-          <div class='well'>
+          <div>
             <img src="IMG_7366.jpg" alt="" class="url_img">
           </div>`);
        }
@@ -65,6 +65,7 @@ $("#get_palette").on("click", function() {
         pantone[1]=response[0].secondary.name;
         hex[2]=response[0].tertiary.hex;
         pantone[2]=response[0].tertiary.name;
+
         database.ref().push({
           url: url,
           prim_hex: hex[0],
@@ -77,6 +78,7 @@ $("#get_palette").on("click", function() {
     });
 
     });
+
      database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
       $("#Last_Palette").prepend(
         `<div>
@@ -90,6 +92,20 @@ $("#get_palette").on("click", function() {
       $("#secondaryPantone").append(snapshot.val().sec_pant).css("background-color", snapshot.val().sec_hex);
       $("#tertiaryHex").append(snapshot.val().tert_hex).css("background-color", snapshot.val().tert_hex);
       $("#tertiaryPantone").append(snapshot.val().tert_pant).css("background-color", snapshot.val().tert_hex);
+
+      $("#userLikeSaved").append(
+        `<div class="emailContent">
+          <span>${snapshot.val().prim_hex}</span>&nbsp;&nbsp;
+          <span>${snapshot.val().prim_pant}</span>
+          <br>
+          <span>${snapshot.val().sec_hex}</span>&nbsp;&nbsp;
+          <span>${snapshot.val().sec_pant}</span>
+          <br>
+          <span>${snapshot.val().tert_hex}</span>&nbsp;&nbsp; 
+          <span>${snapshot.val().tert_pant}</span>
+        </div>`
+      );
+
 
       var send_email = hex.concat(pantone);
       send_email.splice(0,0,"Primary Hex");
@@ -141,5 +157,6 @@ $("#get_palette").on("click", function() {
 });
 
 });
+
 // 1. Load the JavaScript client library.
 // gapi.load('client', start);

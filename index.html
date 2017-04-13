@@ -26,7 +26,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
-					<h1><span class="hashtag">#</span>exed</h1>
+					<h1 id="#hexedLogo"><span class="hashtag">#</span>exed</h1>
 				</div>
 
 				<div class="col-md-5"></div>
@@ -35,7 +35,7 @@
 					<div>
 						<form id="imageSearch">
 							<a href="#inputBar" class="fi-magnifying-glass"></a>
-							<gcse:search></gcse:search>
+							<gcse:search id="gcse"></gcse:search>
 							<input id="inputBar" type="search">	
 						</form>	
 					</div>
@@ -65,16 +65,16 @@
 		<div class="col-md-8">
 			<div class="moveRight">
 				<p>
-					<button id="primaryHex" type="button" class="btn btn-secondary btn-lg"></button>
-					<button id="primaryPantone" type="button" class="btn btn-secondary btn-lg"></button>
+					<button id="primaryHex" type="button" class="btn btn-secondary btn-lg">#FDF8F8</button>
+					<button id="primaryPantone" type="button" class="btn btn-secondary btn-lg">#FDF8F8</button>
 				</p>
 				<p>
-					<button id="secondaryHex" type="button" class="btn btn-secondary btn-lg"></button>
-					<button id="secondaryPantone" type="button" class="btn btn-secondary btn-lg"></button>
+					<button id="secondaryHex" type="button" class="btn btn-secondary btn-lg">#FDF8F8</button>
+					<button id="secondaryPantone" type="button" class="btn btn-secondary btn-lg">#FDF8F8</button>
 				</p>
 				<p>
-					<button id="tertiaryHex" type="button" class="btn btn-secondary btn-lg"></button>
-					<button id="tertiaryPantone" type="button" class="btn btn-secondary btn-lg"></button>
+					<button id="tertiaryHex" type="button" class="btn btn-secondary btn-lg">#FDF8F8</button>
+					<button id="tertiaryPantone" type="button" class="btn btn-secondary btn-lg">#FDF8F8</button>
 				</p>
 				<br>
 				<div id="userLike" class="glyphicon glyphicon-heart"></div>
@@ -90,13 +90,17 @@
 <div class="modal-content">
 	<div class="modal-body">
     	<span class="close">&times;</span>
-
+		
+		<div>
+			<h2></h2>
+		</div>
+		<br>
 		<div id="userLikeSaved"></div>
 
     	<div class="userInput">
 			<form id="myform" method="post">
 				<input type="text" name="from_name" value="Enter Email"/>
-				<span class="glyphicon glyphicon-envelope usericonbox"></span>
+				<span id="sendEmail" class="glyphicon glyphicon-envelope usericonbox"></span>
 			</form>
 		</div>
     </div>

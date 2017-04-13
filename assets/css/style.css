@@ -7,6 +7,7 @@ body {
 h1:hover {
     /*color:#FFA182;*/
     color:#F65C6C;
+    cursor: pointer;
 }
 
 .jumbotron {
@@ -40,6 +41,7 @@ h1:hover {
     text-align: center;
     position: absolute;
     width:100%;
+    outline: none;
 }
 
 .urlSearch input {
@@ -52,11 +54,12 @@ h1:hover {
     border-radius: 6px;
     border: 0px;
     box-shadow: 0px 0px 5px 0px rgba(120,120,120,0.5);
+    outline: none;
 }
 
 #gcse {
 
-    float: right;
+    display:none;
 }
 
 img {
@@ -71,10 +74,11 @@ img {
 }
 
 .btn.btn-secondary.btn-lg {
-    background-color: #faf9f3; 
+    background-color: #FDF8F8; 
     border: 5px solid #fff;
     text-align: center;
     text-decoration: none;
+    outline: none;
     font-size: 30px;
     margin: 4px 4px;
     cursor: pointer;
