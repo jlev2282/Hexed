@@ -55,9 +55,8 @@ h1:hover {
 }
 
 img {
-    width:auto;
     height:auto;
-    max-width:130%;
+    width: 130%;
     padding-top: 10%;
 }
 
@@ -74,12 +73,12 @@ img {
     font-size: 30px;
     margin: 4px 4px;
     cursor: pointer;
-    max-height:100px;
-    min-width: 200px;
+    height:100px;
+    width: 200px;
 }
 
 .btn.btn-secondary.btn-lg:hover {
-    filter: invert(100%);
+    color:#fff;
 }
 
 

@@ -26,7 +26,17 @@ var pantone = [];
 $(document).ready( function(){
      
 $("#get_palette").on("click", function() {
+
       event.preventDefault();
+      
+      $("#Last_Palette").empty();
+      $("#primaryHex").empty();
+      $("#primaryPantone").empty();
+      $("#secondaryHex").empty();
+      $("#secondaryPantone").empty();
+      $("#tertiaryHex").empty();
+      $("#tertiaryPantone").empty();
+
       var url = $("#url_input").val();
       var enc_url = encodeURIComponent(url);
       $("#url_input").val("");
@@ -68,15 +78,9 @@ $("#get_palette").on("click", function() {
 
     });
      database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
-      $("#Last_Palette").prepend(`
-        <div class='well'>
+      $("#Last_Palette").prepend(
+        `<div>
           <img src="` + snapshot.val().url + `" alt="" class="url_img">
-          <span id='pr_hex'>${snapshot.val().prim_hex}</span>
-          <span id='pr_pant'>${snapshot.val().prim_pant}</span>
-          <span id='sec_hex'>${snapshot.val().sec_hex}</span>
-          <span id='sec_pant'>${snapshot.val().sec_pant}</span>
-          <span id='tert_hex'>${snapshot.val().tert_hex}</span>
-          <span id='tert_pant'>${snapshot.val().tert_pant}</span>
         </div>`
         );
 
