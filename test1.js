@@ -30,6 +30,7 @@ $("#get_palette").on("click", function() {
       event.preventDefault();
       
       $("#Last_Palette").empty();
+      $("#userLikeSaved").empty();
       $("#primaryHex").empty();
       $("#primaryPantone").empty();
       $("#secondaryHex").empty();
@@ -155,7 +156,6 @@ $("#get_palette").on("click", function() {
     });
   return false;
 });
-
 });
 
 // 1. Load the JavaScript client library.

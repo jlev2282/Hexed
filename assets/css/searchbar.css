@@ -1,4 +1,4 @@
-a.fi-magnifying-glass {
+i.fi-magnifying-glass {
 	margin-left: 160%;
 	text-decoration: none;
 	text-align: center;
@@ -7,7 +7,7 @@ a.fi-magnifying-glass {
 	cursor: pointer;
 }
 
-a.fi-magnifying-glass:hover {
+i.fi-magnifying-glass:hover {
 	text-decoration: none;
 	color:#F65C6C;
 	cursor: pointer;

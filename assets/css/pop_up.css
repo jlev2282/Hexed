@@ -31,6 +31,21 @@
   color:#F65C6C; 
 }
 
+i.fi-magnifying-glass {
+  margin-left: 160%;
+  text-decoration: none;
+  text-align: center;
+  font-size:40px;
+  color:black;
+  cursor: pointer;
+}
+
+i.fi-magnifying-glass:hover {
+  text-decoration: none;
+  color:#F65C6C;
+  cursor: pointer;
+}
+
 .modal {
     display: none; 
     position: fixed; 

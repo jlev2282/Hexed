@@ -15,8 +15,6 @@
 
 <link rel="stylesheet" href="assets/css/pop_up.css">
 
-<link rel="stylesheet" href="assets/css/searchbar.css">
-
 	<title>Hexed</title>
 </head>
 <body>
@@ -33,11 +31,10 @@
 
 				<div class="col-md-4">
 					<div>
-						<form id="imageSearch">
-							<a href="#inputBar" class="fi-magnifying-glass"></a>
-							<gcse:search id="gcse"></gcse:search>
+						<i id="searchBar" class="fi-magnifying-glass"></i>
+						<!-- <form id="imageSearch">
 							<input id="inputBar" type="search">	
-						</form>	
+						</form>	 -->
 					</div>
 				</div>	
 			</div>
@@ -90,14 +87,14 @@
 <div class="modal-content">
 	<div class="modal-body">
     	<span class="close">&times;</span>
-		
-		<div>
-			<h2></h2>
+		<br><br>
+		<div id="gcse">
+			<gcse:search></gcse:search>
 		</div>
 		<br>
 		<div id="userLikeSaved"></div>
 
-    	<div class="userInput">
+    	<div id="email" class="userInput">
 			<form id="myform" method="post">
 				<input type="text" name="from_name" value="Enter Email"/>
 				<span id="sendEmail" class="glyphicon glyphicon-envelope usericonbox"></span>
