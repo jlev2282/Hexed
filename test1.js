@@ -94,9 +94,17 @@ $("#get_palette").on("click", function() {
       $("#tertiaryHex").append(snapshot.val().tert_hex).css("background-color", snapshot.val().tert_hex);
       $("#tertiaryPantone").append(snapshot.val().tert_pant).css("background-color", snapshot.val().tert_hex);
 
-      $("#userLikeSaved").append(
-        `<div id="emailContent">
-          <span>${snapshot.val().prim_hex}</span>&nbsp;&nbsp;
+      $("#userLikeSaved").append(`
+        <br>
+        <span><mark>${snapshot.val().prim_hex}</mark></span>
+        <span><mark>${snapshot.val().sec_hex}<mark></span>
+        <span><mark>${snapshot.val().tert_hex}<mark></span>
+        <br><br><br>
+        `
+        )
+
+      $("#message_html").append(
+          `<span>${snapshot.val().prim_hex}</span>&nbsp;&nbsp;
           <span>${snapshot.val().prim_pant}</span>
           <br>
           <span>${snapshot.val().sec_hex}</span>&nbsp;&nbsp;
@@ -104,8 +112,8 @@ $("#get_palette").on("click", function() {
           <br>
           <span>${snapshot.val().tert_hex}</span>&nbsp;&nbsp; 
           <span>${snapshot.val().tert_pant}</span>
-        </div>`
-      );
+        `
+        );
 
 
       var send_email = hex.concat(pantone);
@@ -116,7 +124,7 @@ $("#get_palette").on("click", function() {
       send_email.splice(8,0,"Secondary Pantone");
       send_email.splice(10,0,"Tertiary Pantone");
 
-      $("#emailContent").val(send_email.toString());
+      $("#message_html").val(send_email.toString());
       // var app = angular.module('myApp', []);
       // app.controller('myCtrl', function($scope) {
       //   $scope.name = "farts";

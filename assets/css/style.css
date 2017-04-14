@@ -5,7 +5,6 @@ body {
 }
 
 h1:hover {
-    /*color:#FFA182;*/
     color:#F65C6C;
     cursor: pointer;
 }
