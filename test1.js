@@ -95,7 +95,7 @@ $("#get_palette").on("click", function() {
       $("#tertiaryPantone").append(snapshot.val().tert_pant).css("background-color", snapshot.val().tert_hex);
 
       $("#userLikeSaved").append(
-        `<div class="emailContent">
+        `<div id="emailContent">
           <span>${snapshot.val().prim_hex}</span>&nbsp;&nbsp;
           <span>${snapshot.val().prim_pant}</span>
           <br>
@@ -116,7 +116,7 @@ $("#get_palette").on("click", function() {
       send_email.splice(8,0,"Secondary Pantone");
       send_email.splice(10,0,"Tertiary Pantone");
 
-      $("#message_html").val(send_email.toString());
+      $("#emailContent").val(send_email.toString());
       // var app = angular.module('myApp', []);
       // app.controller('myCtrl', function($scope) {
       //   $scope.name = "farts";
@@ -124,6 +124,9 @@ $("#get_palette").on("click", function() {
       database.ref().onDisconnect().remove();
   });
 
+  (function(){
+      emailjs.init("user_Hbny5JSRgeT6X9d5CL3nA");
+   })();
 
   (function() {
     var cx = '000614227564380928360:tx02h79kr_m';
@@ -142,17 +145,16 @@ $("#get_palette").on("click", function() {
   var service_id = "default_service";
   var template_id = "template_twHIZmp5";
 
-  myform.find("button").text("Sending...");
+
+
+  // myform.find("button").text("Sending...");
   emailjs.sendForm(service_id,template_id,"myform")
     .then(function(){ 
       alert("Sent!");
-       myform.find("button").text("Send");
-      $("#from_name").val("");
-      $("#message_html").val("");
-
+       myform.find("button");
     }, function(err) {
        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-       myform.find("button").text("Send");
+       myform.find("button");
     });
   return false;
 });

@@ -5,7 +5,7 @@ var btn = document.getElementById("userLike");
 var searchBtn = document.getElementById("searchBar");
 
 var googleSearch = document.getElementById("gcse");
-var userEmail = document.getElementById("email");
+var userEmail = document.getElementById("myform");
 var likes = document.getElementById("userLikeSaved");
 
 var span = document.getElementsByClassName("close")[0];
@@ -33,3 +33,4 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+

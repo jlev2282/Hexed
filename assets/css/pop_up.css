@@ -80,7 +80,7 @@ i.fi-magnifying-glass:hover {
     color: black;
 }
 
-.emailContent {
+#emailContent {
   text-align: center;
   font-family: helvetica;
   font-size:20px;
