@@ -19,7 +19,8 @@
 .glyphicon.glyphicon-envelope {
   text-align: center;
   font-size: 25px;
-  padding-top:2px;
+  padding-top:6px;
+  right:12px;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
@@ -62,7 +63,7 @@ i.fi-magnifying-glass:hover {
 .modal-content {
     position: fixed;
     height:100%;
-    width: 26%;
+    width: 24%;
     right: 0;
     background-color: #EBF4D2;
     -webkit-animation-name: slideIn;
@@ -124,7 +125,7 @@ div#userLikeSaved {
 
 .usericonbox2 {
     position: absolute;
-    top: 225px;
+    top: 246px;
     right: 0px;
     width: 50px;
     height: 40px;
@@ -150,7 +151,7 @@ button {
   border:none;
 }
 
-.gsc-control-cse {
+/*.gsc-control-cse {
   margin-left:0px;
   text-align:justify;
   background-color:white !important;
@@ -161,7 +162,7 @@ button {
 .gsc-control-cse div {
   border:none;
 }
-
+*/
 input.gsc-search-button {
   border-color: none !important;
   background-color: black !important;
