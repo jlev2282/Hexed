@@ -142,13 +142,23 @@ $("#get_palette").on("click", function() {
   var service_id = "default_service";
   var template_id = "template_twHIZmp5";
 
-  myform.find("button").text("Sending...");
+  // myform.find("button").text("Sending...");
+  // emailjs.sendForm(service_id,template_id,"myform")
+  //   .then(function(){ 
+  //     alert("Sent!");
+  //      myform.find("button").text("Send");
+  //     $("#from_name").val("");
+  //     $("#message_html").val("");
+
+   myform.find("button").text("Sending...");
   emailjs.sendForm(service_id,template_id,"myform")
     .then(function(){ 
       alert("Sent!");
        myform.find("button").text("Send");
       $("#from_name").val("");
-      $("#message_html").val("");
+      $("message_html").val("");
+
+
 
     }, function(err) {
        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
